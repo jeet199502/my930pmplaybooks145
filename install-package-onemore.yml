@@ -1,0 +1,11 @@
+--- # instalation of s/w
+- hosts: all
+  user: ansible
+  connection: ssh
+  become: true
+
+  tasks:
+    - name: install package into hosts
+      yum:
+        name: git
+        state: present

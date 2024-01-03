@@ -1,0 +1,13 @@
+--- # create a file process
+- name: my test playbook
+  hosts: all
+  user: ansible
+  become: true
+  connection: ssh
+
+  tasks:
+    - name: creating a file
+      file:
+        path: /home/ansible/file04
+        state: touch
+        

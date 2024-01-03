@@ -1,0 +1,25 @@
+--- # my task playbooks
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+  tasks:
+    - name: installing httpd s/w into webservers
+      action: yum name=http  state=installed
+      ignore_errors: yes
+
+--- # my task playbooks
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+  tasks:
+    - name: installing httpd s/w into webservers
+      action: yum name=http  state=installed
+      ignore_errors: yes
+
+

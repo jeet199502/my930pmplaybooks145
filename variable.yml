@@ -1,0 +1,15 @@
+--- # my variable session
+- hosts: all
+  connection: ssh
+  become: true
+
+  vars:
+    pkgname: httpd
+
+
+
+
+  tasks:
+    - name: install httpd
+      action: yum name='{{ pkgname}}' state=present
+

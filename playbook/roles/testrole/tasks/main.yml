@@ -1,0 +1,4 @@
+- name: installing into hosts
+  yum:
+    name: httpd
+    state: latest

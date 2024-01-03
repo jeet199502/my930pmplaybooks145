@@ -1,0 +1,9 @@
+---
+- name: install apache s/w
+  hosts: all
+  become: true
+  connection: ssh
+  user: ansible
+
+  roles:
+    - setup-apache-role

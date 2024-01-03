@@ -1,0 +1,14 @@
+---
+# tasks file for setup-apache-role
+- name: install httpd
+  yum:
+    name: httpd
+    state: latest
+    
+    notify: start httpd service
+- name: install apache2
+  apt:
+    name: apache2
+    state: present
+  
+  notify: start apache2 service

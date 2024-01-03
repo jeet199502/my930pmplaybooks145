@@ -1,0 +1,17 @@
+--- # exicute two tasks
+- name: my test playbook
+  hosts: all
+  become: true
+  user: ansible
+  connection: ssh
+
+  tasks:
+    - name: removing  pkges
+      yum:
+        name: httpd
+        state: absent
+
+    - name: stop  service
+      service:
+        name: httpd
+        state: stopped     

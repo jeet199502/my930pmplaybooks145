@@ -1,0 +1,12 @@
+--- # deleatr adir
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+
+  tasks:
+    - name: deleting a directory
+      file:
+        path: /home/ansible/kailashdir
+        state: absent

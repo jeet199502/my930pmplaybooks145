@@ -1,0 +1,12 @@
+--- # install multiple packages/loop
+- hosts: all
+  become: true
+
+  tasks:
+    - name: install s/w's
+      yum: name = ''{{item}}'' state = installed
+      with_items:
+        - httpd
+        - tree
+        - docker
+        - java
